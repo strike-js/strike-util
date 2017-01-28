@@ -1,0 +1,27 @@
+{
+  "name": "strike-util",
+  "version": "1.0.0",
+  "description": "A set of utility classes and functions for web applications. ",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha --compilers js:babel-core/register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/strike-js/strike-util.git"
+  },
+  "keywords": [
+    "utility",
+    "web",
+    "apps",
+    "printf",
+    "format",
+    "curry"
+  ],
+  "author": "Suhail Abood <suhail.abood@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/strike-js/strike-util/issues"
+  },
+  "homepage": "https://github.com/strike-js/strike-util#readme"
+}
