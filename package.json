@@ -1,5 +1,5 @@
 {
-  "name": "strike-util",
+  "name": "strikejs-util",
   "version": "1.0.0",
   "description": "A set of utility classes and functions for web applications. ",
   "main": "lib/index.js",
