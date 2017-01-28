@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "A set of utility classes and functions for web applications. ",
   "main": "lib/index.js",
+  "typings":"strikejs-util.d.ts",
+  "types":"strikejs-util.d.ts",
   "scripts": {
     "test": "mocha --compilers js:babel-core/register"
   },
