@@ -26,6 +26,9 @@ export function curry<T>(fn:(...args:any[])=>T,...args:any[]):(...args:any[])=>T
     let vv = args;
     var left = fn.length - args.length; 
     function ret(){
+        if (left <= 0){
+            return fn.apply(null,vv); 
+        }
         let kk = Array.prototype.slice.call(arguments,0);
         left -= kk.length;  
         vv = [].concat(vv,kk);

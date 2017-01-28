@@ -1,4 +1,9 @@
-export function requestAnimationFramePolyfill() {
+/**
+ * Installs requestAnimationFramePolyfill on browsers that do not support it.
+ */
+/**
+ * Installs requestAnimationFramePolyfill on browsers that do not support it.
+ */ export function requestAnimationFramePolyfill() {
     var lastTime = 0;
     var vendors = ['ms', 'moz', 'webkit', 'o'];
     for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
@@ -21,6 +26,9 @@ export function requestAnimationFramePolyfill() {
         };
     }
 }
+/**
+ * Installs a polyfill for Object.assign on browsers that do not support it.
+ */
 export function objectAssignPolyfill() {
     if (typeof Object.assign != 'function') {
         Object.assign = function (target, varArgs) {
