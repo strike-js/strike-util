@@ -38,3 +38,41 @@ export function setDataAt(object: any, path: string, value: any, p: string): any
     temp[lastKey] = value;
     return object; 
 }
+
+export interface Pool<T> {
+    get():T;
+    put(...args:T[]);
+    destroy():void;
+}
+
+/**
+ * Creates an object pool for better memory efficiency. 
+ * 
+ * @export
+ * @returns
+ */
+export function createPool<T>(createNewFn:()=>T):Pool<T>{
+    var objects:T[] = []; 
+
+    function get():T{
+        if (objects.length > 0){
+            return objects.shift(); 
+        }
+
+        return createNewFn();
+    }
+
+    function put(...action:T[]){
+        objects.push(...action); 
+    }
+
+    function destory(){
+        objects = [];
+    }
+
+    return {
+        get,
+        put,
+        destory
+    } 
+}

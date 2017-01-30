@@ -115,4 +115,18 @@ declare module "strikejs-util"{
      * @returns
      */
     export function printf(format:string,...args:any[]);
+
+    export interface Pool<T> {
+        get():T;
+        put(...args:T[]);
+        destroy():void;
+    }
+
+    /**
+     * Creates an object pool for better memory efficiency. 
+     * 
+     * @export
+     * @returns
+     */
+    export function createPool<T>(createNewFn:()=>T):Pool<T>;
 }

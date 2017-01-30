@@ -174,6 +174,30 @@ formatter.format("My name is %upper","Suhail"); //returns "My name is SUHAIL"
 
 ```
 
+### 10. `createPool`
+
+Returns a memory pool that can be used to improve memory efficiency 
+
+```typescript
+
+import {createPool} from 'strikejs-util'; 
+
+let pool = createPool(()=>{
+	return {
+		type:0,
+		data:1
+	};
+}); 
+
+let a = pool.get(); //a = {type:0,data:1}; 
+let b = pool.get(); //creates a new object {type:0,data:1}; 
+b.data = 2200; 
+b.type = 20; 
+pool.put(b); 
+let c = pool.get(); //returns the item that is currently in the pool {type:20,data:2200};
+
+```
+
 ## Polyfills
 
 The library also provides some polyfills taken from the JavaScript community, these are:

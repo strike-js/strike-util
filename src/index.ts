@@ -3,5 +3,4 @@ export {curry,extractArgumentsFromFunction} from './Functions';
 export {setDataAt,getDataAt} from './Objects'; 
 export {identity} from './Common';  
 export {requestAnimationFramePolyfill,
-    objectAssignPolyfill,
-    forEachPolyfill,mapPolyfill} from './Polyfill'; 
+    objectAssignPolyfill} from './Polyfill'; 
